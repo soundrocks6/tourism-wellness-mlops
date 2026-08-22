@@ -12,6 +12,9 @@ import joblib
 import pandas as pd
 import streamlit as st
 
+# ---- Page config MUST be the first Streamlit command ----
+st.set_page_config(page_title="Wellness Tourism Package Predictor", page_icon="🌴")
+
 # ---- Load the trained model committed to the repository by the pipeline ----
 MODEL_PATH = os.path.join(os.path.dirname(__file__), "model.joblib")
 
@@ -22,8 +25,10 @@ def load_model():
 model = load_model()
 
 # ---- Page header ----
-st.set_page_config(page_title="Wellness Tourism Package Predictor", page_icon="🌴")
 st.title("🌴 Visit with Us — Wellness Tourism Package Predictor")
+
+# ---- Page header ----
+st.set_page_config(page_title="Wellness Tourism Package Predictor", page_icon="🌴")
 st.write(
     "Enter the customer's details below. The model predicts whether the "
     "customer is likely to purchase the newly introduced **Wellness Tourism Package**, "
