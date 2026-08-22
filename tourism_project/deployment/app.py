@@ -1,9 +1,6 @@
 # -----------------------------------------------------------------------------
 # app.py
 # Streamlit frontend for the Wellness Tourism Package purchase predictor.
-# - Loads the trained model committed to tourism_project/deployment/ by the pipeline
-# - Collects customer details from the user and stores them in a dataframe
-# - Displays the model's prediction and purchase probability
 # -----------------------------------------------------------------------------
 
 import os
@@ -26,9 +23,6 @@ model = load_model()
 
 # ---- Page header ----
 st.title("🌴 Visit with Us — Wellness Tourism Package Predictor")
-
-# ---- Page header ----
-st.set_page_config(page_title="Wellness Tourism Package Predictor", page_icon="🌴")
 st.write(
     "Enter the customer's details below. The model predicts whether the "
     "customer is likely to purchase the newly introduced **Wellness Tourism Package**, "
